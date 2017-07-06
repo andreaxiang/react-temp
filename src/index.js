@@ -6,7 +6,7 @@ import Welcome from './Welcome.js';//引入一个独立的组件
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Welcome />,
+  <Welcome name="Andrea"/>,
   document.getElementById('root')
 );
 
@@ -22,16 +22,6 @@ ReactDOM.render(
 
 
 
-/*//组件
-class Welcome extends React.Component {
-  render(){
-    return <h1>Hello,Component</h1>;
-  }
-}
-ReactDOM.render(
-  <Welcome />,
-  document.getElementById('root')
-);*/
 
 /*//按需更新
 function tick(){
