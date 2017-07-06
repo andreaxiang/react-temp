@@ -6,10 +6,12 @@ class Welcome extends React.Component {
       date: new Date(),
       test: '1'
     }
-    this.setState({
-      date: new Date(), //更新date
-      test: 'constructor'
-    })
+    setInterval(()=> {
+        this.setState({
+          date: new Date(), //更新date
+          test: 'setInterval'
+        })
+      },1000)
     console.log('我已经在 constructor 里将 props 和 state 初始化好了')
   }
 
@@ -22,10 +24,6 @@ class Welcome extends React.Component {
   }
 
   render() {
-    this.setState({
-      date: new Date(), //更新date
-      test: 'render'
-    })
     console.log('这里是render')
     return (
       <div>
@@ -58,20 +56,13 @@ class Welcome extends React.Component {
       date: new Date(), // 更新 date
       test: 'shouldComponentUpdate'
     })
+    return true
   }
 
   componentWillUpdate() {
-    this.setState({
-      date: new Date(), // 更新 date
-      test: 'componentWillUpdate'
-    })
   }
 
   componentDidUpdate() {
-    this.setState({
-      date: new Date(), // 更新 date
-      test: 'componentDidUpdate'
-    })
   }
 
   componentWillUnmount() {
