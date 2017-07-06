@@ -2,8 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Welcome from './Welcome.js';//引入一个独立的组件
 import registerServiceWorker from './registerServiceWorker';
 
+ReactDOM.render(
+  <Welcome />,
+  document.getElementById('root')
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//组件
+class Welcome extends React.Component {
+  render(){
+    return <h1>Hello,Component</h1>;
+  }
+}
+ReactDOM.render(
+  <Welcome />,
+  document.getElementById('root')
+);*/
+
+/*//按需更新
 function tick(){
   let element = (
     <div>
@@ -16,6 +46,6 @@ function tick(){
     document.getElementById('root')
   );
 }
-setInterval(tick, 1000);
+setInterval(tick, 1000);*/
 
 registerServiceWorker();
