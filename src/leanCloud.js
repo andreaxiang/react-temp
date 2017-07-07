@@ -48,3 +48,8 @@ export function getCurrentUser(){//从缓存里读取上次登录信息
     return null
   }
 }
+
+export function signOut(){
+  AV.User.logOut()
+  return undefined
+}
