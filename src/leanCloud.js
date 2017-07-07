@@ -31,8 +31,16 @@ export function signUp(username, email, password, successFn, errorFn) {
 
 }
 
-function getUserFromAVUser(AVUser) {
+export function getCurrentUser(){
+  let user = AV.User.current()
+  if(user){
+    return getUserFromAVUser(user)
+  }else{
+    return null
+  }
+}
 
+function getUserFromAVUser(AVUser) {
   return {
     id: AVUser.id,
     username: AVUser.username,
