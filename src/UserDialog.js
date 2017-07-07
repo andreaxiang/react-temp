@@ -176,7 +176,7 @@ export default class UserDialog extends Component {
     stateCopy.selectedTab = 'forgotPassword'
     this.setState(stateCopy)
   }
-  
+
   resetPassword(){
 
   }
