@@ -66,7 +66,7 @@ class App extends Component {
     })
   }
   delete(event, todo){
-    todo.delete = true
+    todo.deleted = true
     this.setState(this.state)
   }
 }
