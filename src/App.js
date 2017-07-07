@@ -32,8 +32,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>{this.state.user.username || '我'}的清单
-          {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
+        <h1>{this.state.user.username||'我'}的备忘录
+          {this.state.user.id ? <button onClick={this.signOut.bind(this)}>退出登录</button> : null}
         </h1>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo}
@@ -49,6 +49,7 @@ class App extends Component {
   }
   onSignUp(user){
     let stateCopy = JSON.parse(JSON.stringify(this.state))
+    stateCopy.user = user
     this.setState(stateCopy)
   }
   onSignOut(){
