@@ -32,8 +32,8 @@ class App extends Component {
         <h1>我的待办</h1>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo}
-            onSubmit={this.addTodo.bind(this)}
-            onChange={this.addTodo.bind(this)} />
+                     onChange={this.changeTitle.bind(this)}
+                     onSubmit={this.addTodo.bind(this)} />
         </div>
         <ol>
           {todos}

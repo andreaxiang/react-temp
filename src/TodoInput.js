@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class TodoInput extends Component {
   render(){
     return <input type="text" value={this.props.content}
-      onKeyPress={this.submit.bind(this)}
-      onChange={this.changeTitle.bind(this)}/>
+                  onChange={this.changeTitle.bind(this)}
+                  onKeyPress={this.submit.bind(this)} />
   }
   submit(e){
     if(e.key === 'Enter'){
