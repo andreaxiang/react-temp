@@ -4,14 +4,13 @@ import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
-import * as localStore from './localStore.js';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       newTodo: '',
-      todoList: localStore.load('todoList') || []
+      todoList: []
     }
   }
 
@@ -45,7 +44,6 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    localStore.save('todoList', this.state.todoList)
   }
 
   toggle(e, todo) {
