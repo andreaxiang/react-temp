@@ -52,7 +52,7 @@ class App extends Component {
     stateCopy.user = user
     this.setState(stateCopy)
   }
-  onSignOut(){
+  signOut(){
     signOut()
     let stateCopy = JSON.parse(JSON.stringify(this.state))
     stateCopy.user = {}
