@@ -20,7 +20,7 @@ export function signUp(username, email, password, successFn, errorFn) {
   // 设置密码
   user.setPassword(password)
 
-  user.signUp().then(function (loginedUser) {
+  user.signUp().then(function (loginedUser) {//注册成功返回当前用户信息
     let user = getUserFromAVUser(loginedUser)
     successFn.call(null, user)
   }, function (error) {
@@ -31,20 +31,20 @@ export function signUp(username, email, password, successFn, errorFn) {
 
 }
 
-export function getCurrentUser(){
+function getUserFromAVUser(AVUser) {
+  return {
+    id: AVUser.id,
+    username: AVUser.attributes.username
+    /*email: AVUser.attributes.email,
+    password: AVUser.attributes.password*/
+  }
+}
+
+export function getCurrentUser(){//从缓存里读取上次登录信息
   let user = AV.User.current()
   if(user){
     return getUserFromAVUser(user)
   }else{
     return null
-  }
-}
-
-function getUserFromAVUser(AVUser) {
-  return {
-    id: AVUser.id,
-    username: AVUser.username,
-    email: AVUser.email,
-    password: AVUser.password
   }
 }
