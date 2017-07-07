@@ -24,7 +24,8 @@ class App extends Component {
       .map((item, index)=> {
         return (
           <li key={index}>
-            <TodoItem todo={item} onToggle={this.toggle.bind(this)}
+            <TodoItem todo={item}
+                      onToggle={this.toggle.bind(this)}
                       onDelete={this.delete.bind(this)}/>
           </li>
         )

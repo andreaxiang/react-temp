@@ -1,14 +1,6 @@
 .UserDialog-Wrapper {
-  /*全屏*/
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  /*内容居中*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*全屏*/      position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+  /*内容居中*/  display: flex; justify-content: center; align-items: center;
   background: url(https://ooo.0o0.ooo/2017/07/05/595cb1053c31a.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -79,12 +71,10 @@
   background: transparent;
 }
 
-.UserDialog form > .row > input:last-child {
-
-}
-
 .UserDialog form > .row.actions {
   margin-left: 4em;
+  display: flex;
+  align-items: center;
 }
 
 .UserDialog form > .row.actions button {
@@ -102,8 +92,8 @@
   cursor: pointer;
 }
 
-/*
 .UserDialog form>.row a {
+  margin-left: .8em;
   font-size: 12px;
   color:#fff;
   cursor: pointer;
@@ -112,4 +102,4 @@
   color:#fff;
   margin-top: .5em;
   text-align: center;
-}*/
+}

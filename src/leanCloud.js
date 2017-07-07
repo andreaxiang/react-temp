@@ -41,28 +41,36 @@ export function signUp(username, email, password, successFn, errorFn) {
     alert("邮箱格式不正确")
   }
 }
-  export function signIn(username, password, successFn, errorFn) {
-    AV.User.logIn(username, password).then(function (loginedUser) {
-      let user = getUserFromAVUser(loginedUser)
-      successFn.call(null, user)
-    }, function (error) {
-      errorFn.call(null, error)
-    })
-  }
+export function signIn(username, password, successFn, errorFn) {
+  AV.User.logIn(username, password).then(function (loginedUser) {
+    let user = getUserFromAVUser(loginedUser)
+    successFn.call(null, user)
+  }, function (error) {
+    errorFn.call(null, error)
+  })
+}
 
-  export function getCurrentUser() {//从缓存里读取上次登录信息
-    let user = AV.User.current()
-    if (user) {
-      return getUserFromAVUser(user)
-    } else {
-      return null
-    }
+export function getCurrentUser() {//从缓存里读取上次登录信息
+  let user = AV.User.current()
+  if (user) {
+    return getUserFromAVUser(user)
+  } else {
+    return null
   }
+}
 
-  export function signOut() {
-    AV.User.logOut()
-    return undefined
-  }
+export function signOut() {
+  AV.User.logOut()
+  return undefined
+}
+
+/*export function sendPasswordResetEmail (email, successFn, errorFn) {
+  AV.User.requestPasswordReset(email).then(function (success) {
+    alert('发送成功，请注意查收邮件并确认')
+  }, function (error) {
+    errorFn.call(null, error)
+  })
+}*/
 
   function getUserFromAVUser(AVUser) {
     return {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './UserDialog.css';
 import {signUp, signIn} from './leanCloud.js';
+//import ForgotPasswordForm from './ForgotPasswordForm'
 
 export default class UserDialog extends Component {
   constructor(props) {
@@ -78,26 +79,6 @@ export default class UserDialog extends Component {
     this.setState(stateCopy)
   }
 
-
-  /*changeUsername(e) {
-   // this.state.formData.username = e.target.value
-   // this.setState(this.state)
-   // 像上面这样写会看到一个警告 warning  Do not mutate state directly. Use setState()
-   let stateCopy = JSON.parse(JSON.stringify(this.state))  // 用 JSON 深拷贝
-   stateCopy.formData.username = e.target.value
-   this.setState(stateCopy)
-   }
-   changePassword(e) {
-   let stateCopy = JSON.parse(JSON.stringify(this.state))  // 用 JSON 深拷贝
-   stateCopy.formData.password = e.target.value
-   this.setState(stateCopy)
-   }
-   changeEmail(e) {
-   let stateCopy = JSON.parse(JSON.stringify(this.state))  // 用 JSON 深拷贝
-   stateCopy.formData.email = e.target.value
-   this.setState(stateCopy)
-   }*/
-
   render() {
     let signUpForm = (
       <form className="signUp" onSubmit={this.signUp.bind(this)}> {/* 注册*/}
@@ -136,6 +117,7 @@ export default class UserDialog extends Component {
         </div>
         <div className="row actions">
           <button type="submit">登录</button>
+          <a href="javascript:;">找回密码</a>
         </div>
       </form>
     )
