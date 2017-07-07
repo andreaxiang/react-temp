@@ -11,7 +11,7 @@
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
 }
 .App> .todoList> li:nth-child(odd){
-  background:rgba(0,0,10,.4);
+  background:rgba(0,0,10,.2);
   color:#fff;
 }
 .App> .todoList> li:nth-child(even){
