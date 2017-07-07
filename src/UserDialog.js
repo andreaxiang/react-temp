@@ -27,8 +27,25 @@ export default class UserDialog extends Component {
     let success = (user)=> {
       this.props.onSignUp.call(null, user)
     }
+    //判断用户注册信息
     let error = (error)=> {
-      alert(error)
+      switch (error.code) {
+        case 201:
+          alert("密码不能为空")
+          break
+        case 202:
+          alert("用户名已被占用")
+          break
+        case 217:
+          alert("用户名不能为空")
+          break
+        case 218:
+          alert("密码不能为空")
+          break
+        default:
+          alert(error)
+          break
+      }
     }
     signUp(username, email, password, success, error)
   }
@@ -39,8 +56,17 @@ export default class UserDialog extends Component {
     let success = (user)=> {
       this.props.onSignIn.call(null, user)
     }
+    //判断用户登录信息
+    //正则判断用户注册信息
     let error = (error)=> {
-      alert(error)
+      switch (error.code) {
+        case 210:
+          alert('用户名与密码不匹配')
+          break
+        default:
+          alert(error)
+          break
+      }
     }
     signIn(username, password, success, error)
   }

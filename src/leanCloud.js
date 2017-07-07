@@ -20,45 +20,55 @@ export function signUp(username, email, password, successFn, errorFn) {
   // 设置密码
   user.setPassword(password)
 
-  user.signUp().then(function (loginedUser) {//注册成功返回当前用户信息
-    let user = getUserFromAVUser(loginedUser)
-    successFn.call(null, user)
-  }, function (error) {
-    errorFn.call(null, error)
-  })
+  //正则判断用户注册信息
+  if (/^\w+@[\w-]+\.\w+(\.\w+)?$/.test(email)) {
+    if (/\w{3,}/.test(username)) {
+      if (/\w{6,}/.test(password)) {
+        user.signUp().then(function (loginedUser) { //注册成功返回当前用户信息
+          let user = getUserFromAVUser(loginedUser)
+          successFn(user)
+        }, function (error) {
+          errorFn(error)
+        });
+      } else {
+        alert("密码不能小于6个字符")
+      }
 
-  return undefined
-
-}
-
-export function signIn(username, password, successFn, errorFn){
-  AV.User.logIn(username, password).then(function(loginedUser){
-    let user = getUserFromAVUser(loginedUser)
-    successFn.call(null, user)
-  }, function(error){
-    errorFn.call(null, error)
-  })
-}
-
-function getUserFromAVUser(AVUser) {
-  return {
-    id: AVUser.id,
-    username: AVUser.attributes.username
-    /*email: AVUser.attributes.email,
-    password: AVUser.attributes.password*/
+    } else {
+      alert("用户名必须大于3个字符")
+    }
+  } else{
+    alert("邮箱格式不正确")
   }
 }
-
-export function getCurrentUser(){//从缓存里读取上次登录信息
-  let user = AV.User.current()
-  if(user){
-    return getUserFromAVUser(user)
-  }else{
-    return null
+  export function signIn(username, password, successFn, errorFn) {
+    AV.User.logIn(username, password).then(function (loginedUser) {
+      let user = getUserFromAVUser(loginedUser)
+      successFn.call(null, user)
+    }, function (error) {
+      errorFn.call(null, error)
+    })
   }
-}
 
-export function signOut(){
-  AV.User.logOut()
-  return undefined
-}
+  export function getCurrentUser() {//从缓存里读取上次登录信息
+    let user = AV.User.current()
+    if (user) {
+      return getUserFromAVUser(user)
+    } else {
+      return null
+    }
+  }
+
+  export function signOut() {
+    AV.User.logOut()
+    return undefined
+  }
+
+  function getUserFromAVUser(AVUser) {
+    return {
+      id: AVUser.id,
+      username: AVUser.attributes.username,
+      email: AVUser.attributes.email,
+      password: AVUser.attributes.password
+    }
+  }
