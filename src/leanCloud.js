@@ -64,13 +64,13 @@ export function signOut() {
   return undefined
 }
 
-/*export function sendPasswordResetEmail (email, successFn, errorFn) {
+export function sendPasswordResetEmail(email, successFn, errorFn) {
   AV.User.requestPasswordReset(email).then(function (success) {
-    alert('发送成功，请注意查收邮件并确认')
+    successFn.call()
   }, function (error) {
-    errorFn.call(null, error)
+    console.dir(error)
   })
-}*/
+}
 
   function getUserFromAVUser(AVUser) {
     return {
