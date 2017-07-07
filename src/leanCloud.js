@@ -31,6 +31,15 @@ export function signUp(username, email, password, successFn, errorFn) {
 
 }
 
+export function signIn(username, password, successFn, errorFn){
+  AV.User.logIn(username, password).then(function(loginedUser){
+    let user = getUserFromAVUser(loginedUser)
+    successFn.call(null, user)
+  }, function(error){
+    errorFn.call(null, error)
+  })
+}
+
 function getUserFromAVUser(AVUser) {
   return {
     id: AVUser.id,
