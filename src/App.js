@@ -4,7 +4,7 @@ import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
-import UserDialog from './UserDialog.js';
+import UserDialog from './UserDialog';
 import {getCurrentUser, signOut, TodoModel} from './leanCloud';
 
 class App extends Component {
@@ -14,6 +14,14 @@ class App extends Component {
       user: getCurrentUser() || {},
       newTodo: '',
       todoList: []
+    }
+    let user = getCurrentUser()
+    if (user) {
+      TodoModel.getByUser(user, (todos)=> {
+        let stateCopy = JSON.parse(JSON.stringify(this.state))
+        stateCopy.todoList = todos
+        this.setState(stateCopy)
+      })
     }
   }
 
@@ -44,10 +52,12 @@ class App extends Component {
         <ol className="todoList">
           {todos}
         </ol>
-        {this.state.user.id ?
-          null :
-          <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)}
-                      onSignIn={this.onSignUpOrSignIn.bind(this)}/>}
+        {
+          this.state.user.id ?
+            null :
+            <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)}
+                        onSignIn={this.onSignUpOrSignIn.bind(this)}/>
+        }
       </div>
     )
   }
@@ -88,14 +98,14 @@ class App extends Component {
       status: null,
       deleted: false
     }
-    TodoModel.create(newTodo,(id)=>{
+    TodoModel.create(newTodo, (id)=> {
       newTodo.id = id
       this.state.todoList.push(newTodo)
       this.setState({
         newTodo: '',
         todoList: this.state.todoList
       })
-    }, (error)=>{
+    }, (error)=> {
       console.log(error)
     })
   }
