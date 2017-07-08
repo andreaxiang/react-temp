@@ -25,16 +25,16 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDialog.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDialog.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71202534">
+            <state vertical-scroll-proportion="0.0">
               <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
               <folding />
             </state>
@@ -45,17 +45,27 @@
         <entry file="file://$PROJECT_DIR$/src/SignInOrSignUp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="19" selection-start-line="34" selection-start-column="10" selection-end-line="38" selection-end-column="19" />
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignInForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SignInForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUpForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SignUpForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -86,17 +96,17 @@
         <option value="$PROJECT_DIR$/src/UserDialog.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/TodoInput.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/TodoInput.css" />
         <option value="$PROJECT_DIR$/src/TodoItem.js" />
         <option value="$PROJECT_DIR$/src/TodoItem.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/SignUpForm.js" />
-        <option value="$PROJECT_DIR$/src/SignInForm.js" />
         <option value="$PROJECT_DIR$/src/ForgotPassword.js" />
         <option value="$PROJECT_DIR$/src/ForgotPasswordForm.js" />
         <option value="$PROJECT_DIR$/src/SignInOrSignUp.js" />
         <option value="$PROJECT_DIR$/src/UserDialog.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/SignInForm.js" />
+        <option value="$PROJECT_DIR$/src/SignUpForm.js" />
       </list>
     </option>
   </component>
@@ -108,7 +118,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="689" />
+    <option name="x" value="661" />
     <option name="y" value="23" />
     <option name="width" value="1248" />
     <option name="height" value="729" />
@@ -253,7 +263,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="689" y="23" width="1248" height="729" extended-state="0" />
+    <frame x="661" y="23" width="1248" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -422,22 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignInForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ForgotPasswordForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -446,10 +440,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignUpForm.js">
+    <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -457,15 +459,23 @@
     <entry file="file://$PROJECT_DIR$/src/SignInOrSignUp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="19" selection-start-line="34" selection-start-column="10" selection-end-line="38" selection-end-column="19" />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
+    <entry file="file://$PROJECT_DIR$/src/SignInForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71202534">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SignUpForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
