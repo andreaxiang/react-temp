@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SignUpForm from './SignUpForm';
 import SignInForm from './SignInForm';
 
@@ -33,12 +33,12 @@ export default class SignInOrSignUp extends Component {
         </nav>
         <div className="panes">
           {this.state.selected === 'signUp' ?
-            <SignUpForm formData={this.state.formData}
+            <SignUpForm formData={this.props.formData}
                         onSubmit={this.props.onSignUp}
                         onChange={this.props.onChange}/>
             : null}
           {this.state.selected === 'signIn' ?
-            <SignInForm formData={this.state.formData}
+            <SignInForm formData={this.props.formData}
                         onChange={this.props.onChange}
                         onSubmit={this.props.onSignIn}
                         onForgotPassword={this.props.onForgotPassword}/>
