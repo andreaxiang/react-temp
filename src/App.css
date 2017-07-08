@@ -73,12 +73,12 @@ i {
 }
 .App> .todoList> li:nth-child(odd){
   background:#cfe6ff;
-  color:#666;
+  color:#333;
 }
 
 .App> .todoList> li:nth-child(even){
   background: #fff;
-  color:#666;
+  color:#333;
 }
 
 /*.condition{
