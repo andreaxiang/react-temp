@@ -118,7 +118,9 @@ export default class UserDialog extends Component {
         </div>
         <div className="row actions">
           <button type="submit">登录</button>
-          <a href="#" onClick={this.showForgotPassword.bind(this)}>找回密码</a>
+        </div>
+        <div className="row actions">
+          <a onClick={this.showForgotPassword.bind(this)}>找回密码</a>
         </div>
       </form>
     )
@@ -148,7 +150,6 @@ export default class UserDialog extends Component {
         <h3>
           重置密码
         </h3>
-
         <form className="forgotPassword" onSubmit={this.resetPassword.bind(this)}> {/* 登录*/}
           <div className="row">
             <label>邮箱</label>
@@ -157,6 +158,8 @@ export default class UserDialog extends Component {
           </div>
           <div className="row actions">
             <button type="submit">发送重置邮件</button>
+          </div>
+          <div className="row actions">
             <a onClick={this.returnToSignIn.bind(this)}>返回登录</a>
           </div>
         </form>

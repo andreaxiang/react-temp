@@ -1,4 +1,190 @@
 .App {
+  background-color: #fff;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  width: 50%;
+  border-radius: 5px;
+  overflow:hidden;
+  box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.15);
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 348003 */
+  src: url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.eot');
+  src: url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.svg#iconfont') format('svg');
+}
+
+.icon {
+  font-family: 'iconfont' !important;
+  font-size:14px;
+  color:#fff;
+}
+i {
+  font-style: normal;
+}
+
+.App .header {
+  display: flex;
+  width: 100%;
+  background: #3b99fc;
+  padding: 1.5em 1em;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+.App .header h1{
+  font-size: 1.3em;
+  color: #FFF;
+  font-weight: normal;
+  margin:0;
+}
+.App .header a{
+  color: #FFF;
+  display: inline-block;
+  cursor:pointer;
+  font-size:1em;
+}
+.App .header a i{
+  margin-right: 3px;
+  vertical-align:text-bottom;
+}
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+}
+
+.inputWrapper input {
+  height: 3em;
+  flex-grow: 1;
+  padding: 0.5em;
+  outline: none;
+  border:1px solid #3b99fc;
+}
+.App> .todoList> li {
+  width:95%;
+  margin:0 auto;
+}
+.App> .todoList> li:nth-child(odd){
+  background:#cfe6ff;
+  color:#666;
+}
+
+.App> .todoList> li:nth-child(even){
+  background: #fff;
+  color:#666;
+}
+
+/*.condition{
+  width: 100%;
+  padding: 10px;
+}
+.condition div{
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid #CCC;
+  padding: 0 0.5em;
+  padding-bottom: 0.5em;
+  align-items: flex-end;
+}
+
+.condition div span{
+  font-size: 1em;
+  color: #1196EE;
+}
+.condition div i{
+  color: #1196EE;
+  cursor: pointer;
+}
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  list-style: none;
+  flex-direction:column;
+}
+.lists li{
+  flex-grow: 1;
+  margin-bottom: 0.5em;
+  background-color: #FFFACD;
+}
+.lists li div{
+  display: flex;
+  align-items: center;
+}
+
+.lists input[type="checkbox"]{
+  width: 13px;
+  height: 13px;
+  position: relative;
+  color: #FFFACD;
+  background: #FFFACD;
+  border:1px solid #FFFACD;
+  outline: none;
+}
+.lists input[type="checkbox"]:before{
+  width: 14px;
+  height: 14px;
+  content: "\e720";
+  position: absolute;
+  background-color: #FFFACD;
+  color: #1196EE;
+}
+.lists input[type="checkbox"]:after{
+  width: 14px;
+  height: 14px;
+  content: "\e721";
+  position: absolute;
+  background-color: #FFFACD;
+  color: #1196EE;
+  display: none;
+}
+
+.lists input[type="checkbox"]:checked:before{
+  display: none;
+}
+.lists input[type="checkbox"]:checked:after{
+  display: inline-block;
+}
+.lists li div{
+  padding: 0 0.5em;
+  display: flex;
+  height: 3em;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.lists li div input[type="text"]{
+  flex-grow: 1;
+  padding:0 0.5em;
+  border:0px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+.lists li div i{
+  color: lightcoral;
+  font-size: 14px;
+  cursor: pointer;
+}*/
+
+
+
+
+
+
+
+/*
+.App {
   color: #333;
   border: 1px solid #ddd;
   font-family: 'Microsoft Yahei';
@@ -10,8 +196,17 @@
   min-width: 32em;
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
 }
+@font-face {
+  font-family: 'iconfont';  /!* project id 348003 *!/
+  src: url('//at.alicdn.com/t/font_tr0cik1d6uaw0zfr.eot');
+  src: url('//at.alicdn.com/t/font_tr0cik1d6uaw0zfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_tr0cik1d6uaw0zfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_tr0cik1d6uaw0zfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_tr0cik1d6uaw0zfr.svg#iconfont') format('svg');
+}
+
 .App> .todoList> li:nth-child(odd){
-  background:rgba(0,0,10,.2);
+  background:#ddd/!*rgba(0,0,10,.2)*!/;
   color:#fff;
 }
 .App> .todoList> li:nth-child(even){
@@ -24,11 +219,13 @@
   justify-content: center;
   align-items: center;
 }
-/*.App> h1> button {
+.App> h1> button {
+  font-size:12px;
   margin-left:1em;
   padding: .3em;
   cursor: pointer;
 }
 .App> h1> button:hover {
   color: red;
-}*/
+}
+*/

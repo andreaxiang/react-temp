@@ -4,8 +4,8 @@ import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
-import UserDialog from './UserDialog';
-import {getCurrentUser, signOut} from './leanCloud.js'
+import UserDialog from './UserDialog.js';
+import {getCurrentUser, signOut} from './leanCloud.js';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +18,6 @@ class App extends Component {
   }
 
   render() {
-
     let todos = this.state.todoList
       .filter((item=> !item.deleted))
       .map((item, index)=> {
@@ -33,10 +32,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>{this.state.user.username || '我'}的备忘录
-          {this.state.user.id ? <button onClick={this.signOut.bind(this)}>退出登录</button> : null}
-        </h1>
-
+        <nav className="header">
+          <h1>{this.state.user.username || '我'}的待办清单</h1>
+          <a onClick={this.signOut.bind(this)}><i className="icon">&#xe606;</i>退出</a>
+        </nav>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo}
                      onChange={this.changeTitle.bind(this)}
