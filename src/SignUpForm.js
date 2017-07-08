@@ -3,7 +3,7 @@ import React from 'react';
 //将SignUpForm组件改成一个函数
 export default function (props) {
   return (
-    <form className="signUp" onSubmit={this.props.onSubmit.bind(this)}> {/* 注册*/}
+    <form className="signUp" onSubmit={this.props.onSubmit}> {/* 注册*/}
       <div className="row">
         <label>用户名</label>
         <input type="text" value={this.state.formData.username}
