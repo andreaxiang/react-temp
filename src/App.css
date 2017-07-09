@@ -1,14 +1,16 @@
 /*V1.1版本样式表*/
 .App {
   background-color: #fff;
+  font-family: 'Microsoft Yahei';
   margin-top: 2em;
+  margin-right:auto;
+  margin-left: auto;
   padding-bottom: 2em;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  max-width: 975px;
   box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.15);
 }
 
@@ -32,14 +34,20 @@ i {
 
 .App .header {
   display: flex;
+  align-items: flex-end;
   width: 100%;
+  height:100%;
   background: #3b99fc;
   padding: 1.5em 1em;
+  color:#fff;
+  vertical-align: middle;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .App .header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2em;
   color: #FFF;
   font-weight: normal;
@@ -64,25 +72,22 @@ i {
   width: 100%;
   padding: 1em;
 }
-
-.inputWrapper input {
-  height: 3em;
-  flex-grow: 1;
-  padding: 0.5em;
-  outline: none;
-  border: 1px solid #3b99fc;
+.App .todoList {
+  width:100%;
+  margin:0 auto;
+  height: 100%;
 }
 
 .App .todoList> li{
-  width: 95%;
+  width: 97%;
   margin: 0 auto;
-  color: #333;
+  color: #3e434f;
   border-bottom: 1px solid #eee;
   transition: .2s all ease;
 }
 
 .App .todoList> li:hover{
   background: rgba(250,250,250,1);
-  border-bottom: 1px solid #ffad1b;
+  border-bottom: 1px solid #3b99fc;
   transition: .3s all ease;
 }

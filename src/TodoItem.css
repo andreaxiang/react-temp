@@ -1,26 +1,20 @@
 .TodoItem {
-  position: relative;
   display: flex;
   height: 3em;
   align-items: center;
 }
-.TodoItem input {
-  width: 2em;
-  height: 2em;
+.TodoItem input[type="checkbox"] {
+  width:1.2em;
+  height:1.2em;
   margin-left: .5em;
+  vertical-align: middle;
 }
-.TodoItem input~label {
-  outline: none;
-  transition: .2s all ease;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+
 .TodoItem input:checked~label {
   text-decoration: line-through;
-  opacity: .4;
+  opacity: .5;
 }
-.TodoItem label {
+.TodoItem .title {
   font-size: 1.1em;
   padding: .3em;
   flex: 1;
@@ -35,12 +29,12 @@
   border: none;
   color: #b9b9b9;
   outline:none;
-  font-size: 1.2em;
-  margin-right: .5em;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
 .TodoItem> .del-btn i {
+  margin-right: .3em;
   font-style: normal;
   vertical-align:text-bottom;
 }
