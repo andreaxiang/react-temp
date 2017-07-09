@@ -5,8 +5,7 @@ import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
 import UserDialog from './UserDialog';
-import AV, {getCurrentUser, signOut, TodoModel} from './leanCloud';
-import Menu from './Menu';
+import {getCurrentUser, signOut, TodoModel} from './leanCloud';
 
 class App extends Component {
   constructor(props) {
@@ -35,35 +34,16 @@ class App extends Component {
             <TodoItem todo={item}
                       onToggle={this.toggle.bind(this)}
                       onDelete={this.delete.bind(this)}
-                      onEdit={this.edit.bind(this)}
-                      onSave={this.saveEditData.bind(this)}
               />
-          </li>
-        )
-      })
-    let todosDone = this.state.todoList
-      .filter((item)=>!item.deleted && item.status === 'completed')
-      .map((item,index)=>{
-        return (
-          <li key={index} >
-            <TodoItem todo={item} onToggle={this.toggle.bind(this)}
-                      onSave={this.saveEditData.bind(this)}
-                      onEdit={this.edit.bind(this)}
-                      onDelete={this.delete.bind(this)} />
           </li>
         )
       })
 
     return (
       <div className="App">
-        <Menu user={this.state.user.username}
-              onSignOut={this.signOut.bind(this)}
-        />
-        <main>
           <nav className="header">
-            <h1>{this.state.user.username || '我'}的待办</h1>
-            <h1 className="showDate">
-              {this.getDate.call(this)}
+            <h1>
+              <i className="icon">&#xe639;</i>{this.state.user.username}
             </h1>
             <a onClick={this.signOut.bind(this)}><i className="icon">&#xe606;</i>退出</a>
           </nav>
@@ -81,14 +61,8 @@ class App extends Component {
               <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)}
                           onSignIn={this.onSignUpOrSignIn.bind(this)}/>
           }
-        </main>
       </div>
     )
-  }
-
-  getDate(){
-    let d = new Date()
-    return ( d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() )
   }
 
   //合并 onSignUp 和 onSignIn
@@ -151,32 +125,6 @@ class App extends Component {
       todo.deleted = true
       this.setState(this.state)
     })
-  }
-
-  saveDataToCloud(stateCopy){
-    let _this = this
-    let id = AV.User.current().get('todoListId')
-    let todo = AV.Object.createWithoutData('TodoList',id)
-    todo.set('todoList',stateCopy.todoList)
-    todo.save().then(function(todo){
-      //成功保存至leanCloud之后本地再更新state
-      _this.setState(stateCopy)
-    }, function(error){
-      console.log(error)
-    })
-  }
-  edit(e,todo){
-    let index = this.state.todoList.indexOf(todo)
-    this.state.todoList[index].title = e.target.innerText
-  }
-  saveEditData(){
-    let stateCopy = JSON.parse(JSON.stringify(this.state))
-    this.saveDataToCloud.call(this, stateCopy)
-  }
-  onShowComplete(){
-    let stateCopy = JSON.parse(JSON.stringify(this.state))
-    stateCopy.show = 'todosDone'
-    this.setState(stateCopy)
   }
 }
 

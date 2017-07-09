@@ -11,19 +11,12 @@ export default class Menu extends Component {
   render(){
     return (
       <section className="Menu">
-        <header className="row">
-          <a><i className="icon">&#xe639;</i></a>
-          <span>{this.props.user}</span>
-          <div className="user-info">
-            <a onClick={this.props.onSignOut.bind(null)} className="row logout"><i className="icon">&#xe606;</i> 退出登录</a>
-          </div>
-        </header>
-        <section className="row" onClick={this.onShowComplete.bind(this)}><i className="icon"></i> 已完成</section>
-        <section className="row"><i className="icon"></i> 其他功能</section>
+        <div className='user-avatar'>
+          <i className="icon">&#xe639;</i>{this.props.user}
+        </div>
+          <a onClick={this.props.onSignOut.bind(null)}><i className="icon">&#xe606;</i> 退出</a>
       </section>
     )
   }
-  onShowComplete(){
-    this.props.onShowComplete()
-  }
 }
+
