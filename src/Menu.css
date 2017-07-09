@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 348003 */
+  src: url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.eot');
+  src: url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_gho27zf2bsqhncdi.svg#iconfont') format('svg');
+}
+
+.Menu .icon {
+  font-family: 'iconfont' !important;
+  font-size:14px;
+  color:#fff;
+}
+i {
+  font-style: normal;
+}
+
+.Menu>.row:hover {
+  background: rgba(250,250,250,1);
+  cursor: pointer;
+}
+.Menu>.row {
+  margin: 5px 8px;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #676767;
+}
+.Menu>.row:hover {
+  color: #333;
+}
+.Menu>header {
+  padding: 3px 0;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.Menu i {
+  margin-right: 8px;
+  height: 32px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.Menu>header>span {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.Menu>header>.user-info {
+  display: none;
+  position: absolute;
+  width: 90%;
+  background: #fff;
+  top: 40px;
+  padding: 10px 0;
+  box-shadow: 0 0 3px rgba(0,0,0,0.25)
+}
+.Menu>header>.user-info>.row {
+  padding: 10px;
+}
+.Menu>header>.user-info>.row:hover {
+  background: rgba(250,250,250,1);
+  cursor: pointer;
+}
+.Menu>header:hover>.user-info {
+  display: block;
+}
+.logout {
+  color: #ff5e5e;
+}
