@@ -15,13 +15,14 @@
   min-width: 360px;
 }
 .UserDialog:before {
-  content: "Day's Todolist";
+  content: "Todo List";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: block;
   flex-wrap: wrap;
   padding: .5em 0;
   text-align: center;
   font-size: 2.2em;
-  color:#fff;
+  color:rgba(255,255,255,.5);
 }
 
 .UserDialog nav {
